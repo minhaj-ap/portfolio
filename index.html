@@ -12,6 +12,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <style>
       .vh-80 {
         height: 85vh;
@@ -62,7 +66,7 @@
                 <a class="nav-link active fs-5" href="#works">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active fs-5" href="#hire-me">HIRE ME</a>
+                <a class="nav-link active fs-5" href="#cont-me">CONTACT ME</a>
               </li>
             </ul>
           </div>
@@ -85,12 +89,7 @@
             <div>
               <a href="#why-me">
                 <button type="button" class="btn btn-outline-success me-1">
-                  Why Me?
-                </button></a
-              >
-              <a href="#hire-me">
-                <button type="button" class="btn btn-success">
-                  HIRE ME
+                  KNOW MORE
                 </button></a
               >
             </div>
@@ -152,18 +151,22 @@
       <p class="text-center fs-1 fw-bold">PROJECTS</p>
       <div class="row">
         <div class="col">
-            <a href="http://tudApp.web.app"><picture>
-            <source
-              media="(max-width:575.98px )"
-              srcset="./images/image-small.jpg"
-            />
-            <source
-              media="(min-width: 576px)"
-              srcset="images/image-medium.jpg"
-            />
-            <img src="images/image-medium.jpg" alt="Description of the image" />
-          </picture></a>
-          
+          <a href="http://tudApp.web.app"
+            ><picture>
+              <source
+                media="(max-width:575.98px )"
+                srcset="./images/image-small.jpg"
+              />
+              <source
+                media="(min-width: 576px)"
+                srcset="images/image-medium.jpg"
+              />
+              <img
+                src="images/image-medium.jpg"
+                alt="Description of the image"
+              /> </picture
+          ></a>
+
           <p class="text-dark fs-4">
             This is a multi user supported TODO App, users can login with their
             email and use it.
@@ -171,7 +174,75 @@
         </div>
       </div>
     </section>
-    
+    <section
+      class="container mw-100 bg-tertiary h-100 text-white pb-5"
+      id="cont-me"
+    >
+      <h4 class="fs-1 pt-3 text-center">CONTACT ME</h4>
+      <form>
+        <div class="mb-3">
+          <label for="InputName" class="form-label">Name</label>
+          <input
+            type="email"
+            class="form-control"
+            id="InputName"
+            placeholder="Name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Email Address"
+          />
+          <div id="emailHelp" class="form-text text-warning">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="InputMsg" class="form-label">Message</label>
+          <textarea class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-warning">Reset</button>
+      </form>
+    </section>
+    <footer class="container mw-100 pt-5 bg-main pb-2">
+      <div class="row">
+        <div class="col-sm">
+          <p class="">
+            <a
+              href="https://github.com/minhajAp"
+              class="text-body text-decoration-none"
+              ><i class="bi bi-github"></i> Github</a
+            >
+          </p>
+        </div>
+        <div class="col-sm">
+          <p class="">
+            <a
+              href="https://www.instagram.com/minhajj.ap/"
+              class="text-body text-decoration-none"
+              ><i class="bi bi-instagram"></i> Instagram</a
+            >
+          </p>
+        </div>
+        <div class="col-sm">
+          <p class="">
+            <a
+              href="https://wa.me/+916235436373"
+              class="text-body text-decoration-none"
+              ><i class="bi bi-whatsapp"></i> Whatsapp</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
