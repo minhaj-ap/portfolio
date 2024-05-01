@@ -13,8 +13,14 @@
       crossorigin="anonymous"
     />
     <style>
+      .vh-80 {
+        height: 85vh;
+      }
       .bg-main {
         background-color: #f3ca52;
+      }
+      .bg-main-sec {
+        background-color: #f6e9b2;
       }
       .bg-second {
         background-color: #7aba78;
@@ -30,7 +36,7 @@
         class="navbar navbar-expand-lg navbar-light bg-light fixed-top w-100"
       >
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="#">MINHAJ AP.</a>
+          <a class="navbar-brand fw-bold fs-2" href="#">MINHAJ AP.</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -45,13 +51,18 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active fs-5" aria-current="page" href="#"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#why-me">Why me?</a>
+                <a class="nav-link active fs-5" href="#why-me">Why me?</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#hire-me">HIRE ME</a>
+                <a class="nav-link active fs-5" href="#works">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-5" href="#hire-me">HIRE ME</a>
               </li>
             </ul>
           </div>
@@ -90,7 +101,9 @@
     <section class="container mw-100 bg-second text-white" id="why-me">
       <div class="row">
         <div class="col-sm">
-          <h3 class="text-center text-decoration-underline fw-bold fs-1 mt-3 pt-5">
+          <h3
+            class="text-center text-decoration-underline fw-bold fs-1 mt-3 pt-5"
+          >
             Why Me
           </h3>
           <p class="mt-3 fs-3">
@@ -107,32 +120,58 @@
             one would notice , but my inner self wont allow it to leave.
           </p>
         </div>
-        <hr class="d-sm-none">
+        <hr class="d-sm-none" />
         <div class="col">
-          <h3 class="fs-2 text-center text-decoration-underline mt-4 pt-5">MY LEVEL OF KNOWLEDGE</h3>
+          <h3 class="fs-2 text-center text-decoration-underline mt-4 pt-5">
+            MY LEVEL OF KNOWLEDGE
+          </h3>
           <p class="fs-4">HTML</p>
-          <div class="progress my-3" style="height:35px;">
+          <div class="progress my-3" style="height: 35px">
             <div class="progress-bar" style="width: 90%">90%</div>
           </div>
           <p class="fs-4">CSS</p>
-          <div class="progress my-3" style="height:35px;">
-            <div class="progress-bar " style="width: 70%;">70%</div>
+          <div class="progress my-3" style="height: 35px">
+            <div class="progress-bar" style="width: 70%">70%</div>
           </div>
           <p class="fs-4">JAVASCRIPT</p>
-          <div class="progress my-3" style="height:35px;">
-            <div class="progress-bar" style="width: 65%;">65%</div>
+          <div class="progress my-3" style="height: 35px">
+            <div class="progress-bar" style="width: 65%">65%</div>
           </div>
           <p class="fs-4">REACT JS</p>
-          <div class="progress my-3" style="height:35px;">
-            <div class="progress-bar" style="width: 50%; ">50%</div>
+          <div class="progress my-3" style="height: 35px">
+            <div class="progress-bar" style="width: 50%">50%</div>
           </div>
           <p class="fs-4">FIREBASE</p>
-          <div class="progress my-3" style="height:35px;">
-            <div class="progress-bar" style="width: 80%;">80%</div>
+          <div class="progress my-3" style="height: 35px">
+            <div class="progress-bar" style="width: 80%">80%</div>
           </div>
         </div>
       </div>
     </section>
+    <section class="container mw-100 text-warning bg-main-sec h-100" id="works">
+      <p class="text-center fs-1 fw-bold">PROJECTS</p>
+      <div class="row">
+        <div class="col">
+            <a href="http://tudApp.web.app"><picture>
+            <source
+              media="(max-width:575.98px )"
+              srcset="./images/image-small.jpg"
+            />
+            <source
+              media="(min-width: 576px)"
+              srcset="images/image-medium.jpg"
+            />
+            <img src="images/image-medium.jpg" alt="Description of the image" />
+          </picture></a>
+          
+          <p class="text-dark fs-4">
+            This is a multi user supported TODO App, users can login with their
+            email and use it.
+          </p>
+        </div>
+      </div>
+    </section>
+    
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
