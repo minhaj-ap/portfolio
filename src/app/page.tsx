@@ -5,7 +5,7 @@ export default function Home() {
     <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col items-center justify-center px-4 transition-colors duration-300">
       {/* Heading */}
       <h1 className="text-4xl md:text-6xl font-bold text-center mb-4 animate-fadeInUp">
-        Hi, I'm Minhaj AP
+        Hi, I&apos;m Minhaj AP
       </h1>
 
       {/* Subheading */}
