@@ -71,9 +71,6 @@ const Particles = () => {
 
 
 export default function Hero() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300 relative">
