@@ -106,14 +106,31 @@ export default function Hero() {
           </span>{" "}
           focused on backend logic.
         </p>
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          href="#"
-          className="px-6 py-3 bg-teal-500 font-medium text-white rounded-lg shadow-lg hover:bg-teal-600 transition-colors relative z-10"
-        >
-          Explore My Works
-        </motion.a>
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
+          {/* Primary Button - Hire Me */}
+          <motion.a
+            whileHover={{
+              scale: 1.03,
+              boxShadow: "0 4px 12px rgba(13, 148, 136, 0.3)",
+            }}
+            whileTap={{ scale: 0.98 }}
+            href="#contact"
+            className="px-6 py-3 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 font-medium text-center whitespace-nowrap"
+          >
+            Hire Me
+          </motion.a>
+
+          {/* Secondary Button - Get Resume */}
+          <motion.a
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            href="/documents/resume.pdf"
+            download="Minhaj_AP_Resume.pdf"
+            className="px-6 py-3 bg-transparent border-2 border-teal-500/60 dark:border-teal-400/60 text-teal-600 dark:text-teal-400 rounded-lg hover:bg-teal-500/10 dark:hover:bg-teal-400/10 transition-all duration-200 font-medium text-center whitespace-nowrap"
+          >
+            Get Resume
+          </motion.a>
+        </div>
       </motion.section>
     </div>
   );
