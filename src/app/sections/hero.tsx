@@ -37,8 +37,8 @@ const Particles = () => {
       theme === "dark"
         ? ["#4FD1C5", "#38B2AC", "#81E6D9"] // Brighter teals for dark mode
         : ["#0EA5E9", "#3B82F6", "#6366F1"]; // Vibrant blues for light mode
-
-    const particles = Array.from({ length: 45 }).map((_, i) => {
+    const noOfParticles = window.innerWidth <= 780 ? 25 : 45;
+    const particles = Array.from({ length: noOfParticles }).map((_, i) => {
       const particle = document.createElement("div");
       particle.className = "absolute rounded-full pointer-events-none";
       particle.style.width = `${Math.random() * 10 + 4}px`; // Larger particles (4-14px)
@@ -79,7 +79,7 @@ export default function Hero() {
   const handleDownload = () => {
     try {
       const link = document.createElement("a");
-      link.href = "/documents/resume.pdf"; 
+      link.href = "/documents/resume.pdf";
       link.download = "Minhaj_Ap_resume.pdf";
       link.click();
       toast.success("Successfully downloaded");
@@ -108,7 +108,7 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="flex flex-col items-center justify-center h-[calc(100vh-80px)] px-6 text-center relative"
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-2">
+        <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-2">
           Hi, I&apos;m{" "}
           <span className="text-teal-500 dark:text-teal-400">Minhaj AP</span>
         </h1>
@@ -119,7 +119,7 @@ export default function Hero() {
           </span>{" "}
           focused on backend logic.
         </p>
-        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
+        <div className="flex flex-wrap gap-3 sm:gap-4  justify-center">
           {/* Primary Button - Hire Me */}
           <motion.a
             whileHover={{

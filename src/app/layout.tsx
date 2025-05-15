@@ -32,7 +32,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           {children}
-          <ToastContainer position="bottom-right" />
+          <ToastContainer position="bottom-right" autoClose={1500}/>
           <ThemeToggle />
         </ThemeProvider>
       </body>
