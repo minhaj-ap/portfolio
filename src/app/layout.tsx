@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/context/theme-context";
 import ThemeToggle from "@/components/theme-toggle";
 
+import { ToastContainer } from "react-toastify";
 export const metadata: Metadata = {
   title: "MINHAJ AP | FULL STACK DEVELOPER",
 };
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           {children}
+          <ToastContainer position="bottom-right" />
           <ThemeToggle />
         </ThemeProvider>
       </body>

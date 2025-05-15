@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { useTheme } from "@/context/theme-context";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 // Grid Background
 const GridBackground = () => (
@@ -75,6 +76,18 @@ const Particles = () => {
 };
 
 export default function Hero() {
+  const handleDownload = () => {
+    try {
+      const link = document.createElement("a");
+      link.href = "/documents/resume.pdf"; 
+      link.download = "Minhaj_Ap_resume.pdf";
+      link.click();
+      toast.success("Successfully downloaded");
+    } catch (err) {
+      toast.error("Failed to download resume");
+      console.error(err);
+    }
+  };
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300 relative">
       <Head>
@@ -124,9 +137,8 @@ export default function Hero() {
           <motion.a
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            href="/documents/resume.pdf"
-            download="Minhaj_AP_Resume.pdf"
-            className="px-6 py-3 bg-transparent border-2 border-teal-500/60 dark:border-teal-400/60 text-teal-600 dark:text-teal-400 rounded-lg hover:bg-teal-500/10 dark:hover:bg-teal-400/10 transition-all duration-200 font-medium text-center whitespace-nowrap"
+            onClick={handleDownload}
+            className="px-6 py-3 bg-white dark:bg-gray-800 border-2 border-teal-500/60 dark:border-teal-400/60 text-teal-600 dark:text-teal-400 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors font-medium"
           >
             Get Resume
           </motion.a>
