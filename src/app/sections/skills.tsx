@@ -1,12 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import {
-  FiServer,
-  FiDatabase,
-  FiCode,
-  FiGitBranch,
-} from "react-icons/fi";
+import { FiServer, FiDatabase, FiCode, FiGitBranch } from "react-icons/fi";
 import { useState, useEffect } from "react";
 
 const skills = [
@@ -50,17 +45,24 @@ const skills = [
   },
 ];
 
-
 export default function SkillsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   console.log(isInView);
   useEffect(() => {
     if (isInView) {
-      setIsLoading(true); 
+      setIsLoading(false);
     }
   }, [isInView]);
+  useEffect(() => {
+    if (!isLoading) {
+      const gitElement = document.getElementById("Git");
+      if (gitElement) {
+        gitElement.scrollIntoView({ behavior: "smooth", block: "end" });
+      }
+    }
+  }, [isLoading]);
   return (
     <section
       id="skills"
@@ -78,7 +80,7 @@ export default function SkillsSection() {
       </motion.h2>
 
       <AnimatePresence>
-        {isLoading && (
+        {!isLoading && (
           <motion.div
             key="content"
             initial={{ opacity: 0 }}
@@ -119,6 +121,7 @@ export default function SkillsSection() {
                     initial={{ width: 0 }}
                     whileInView={{ width: `${skill.level}%` }}
                     viewport={{ once: true }}
+                    id={skill.name}
                     transition={{
                       duration: 1,
                       delay: 0.2 * skills.indexOf(skill),
