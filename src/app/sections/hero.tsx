@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-// import { useTheme } from "next-themes";
 import { useTheme } from "@/context/theme-context";
 import Head from "next/head";
 import { motion } from "framer-motion";
