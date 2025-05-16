@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 // import { useTheme } from "next-themes";
 import { useTheme } from "@/context/theme-context";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
+import ScrollIndicator from "@/components/scroll-indicator";
 
 // Grid Background
 const GridBackground = () => (
@@ -76,6 +77,29 @@ const Particles = () => {
 };
 
 export default function Hero() {
+  const [clickedScroll, setClickedScroll] = useState(false);
+  const [fadingOut, setFadingOut] = useState(false);
+     useEffect(() => {
+       const handleScroll = () => {
+         const scrollTop = window.scrollY || document.documentElement.scrollTop;
+         const fullHeight = document.documentElement.scrollHeight;
+         const viewportHeight = window.innerHeight;
+         const halfway = (fullHeight - viewportHeight) / 2;
+
+         if (scrollTop > halfway && !clickedScroll && !fadingOut) {
+           setFadingOut(true);
+         }
+       };
+
+       window.addEventListener("scroll", handleScroll);
+       return () => window.removeEventListener("scroll", handleScroll);
+     }, [clickedScroll, fadingOut]);
+       useEffect(() => {
+         if (fadingOut) {
+           const timeout = setTimeout(() => setClickedScroll(true), 500); // match animation duration
+           return () => clearTimeout(timeout);
+         }
+       }, [fadingOut]);
   const handleDownload = () => {
     try {
       const link = document.createElement("a");
@@ -106,7 +130,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="flex flex-col items-center justify-center h-[calc(100vh-80px)] px-6 text-center relative"
+        className="flex flex-col items-center justify-center h-[calc(100vh-120px)] px-6 text-center relative"
       >
         <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-2">
           Hi, I&apos;m{" "}
@@ -144,6 +168,20 @@ export default function Hero() {
           </motion.a>
         </div>
       </motion.section>
+      {!clickedScroll && (
+        <div
+          onClick={() => setFadingOut(true)}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            opacity: fadingOut ? 0 : 1,
+            transition: "opacity 0.5s ease",
+            pointerEvents: fadingOut ? "none" : "auto", 
+          }}
+        >
+          <ScrollIndicator />
+        </div>
+      )}
     </div>
   );
 }

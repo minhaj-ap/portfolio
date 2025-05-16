@@ -48,5 +48,6 @@
 }
 
 html {
+  transition: background-color 0.3s ease;
   @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))];
 }
