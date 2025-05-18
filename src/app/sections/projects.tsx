@@ -50,7 +50,7 @@ const projects = [
 export default function ProjectsSection() {
   const [tooltip, setTooltip] = useState({ show: false, project: "" });
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900/50">
+    <section className="py-16 bg-gray-50/60 dark:bg-gray-900/50">
       <div className="max-w-6xl mx-auto px-6 overflow-hidden">
         {/* Section Title */}
         <motion.h2

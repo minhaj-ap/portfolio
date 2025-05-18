@@ -4,7 +4,8 @@ import Hero from "./sections/hero";
 import SkillsSection from "./sections/skills";
 import ProjectsSection from "./sections/projects";
 import Background from "./background";
-// import AIProjectsSection from "./sections/AIProjectsSection";
+import AIProjectsSection from "./sections/AIProjectsSection";
+import LeetCodeSection from "./sections/leetCodeSection";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Hero />
       <SkillsSection />
       <ProjectsSection />
-      {/* <AIProjectsSection /> Will be available after builing AI porjects */}
+      <AIProjectsSection />
+      <LeetCodeSection />
     </React.Fragment>
   );
 }
