@@ -55,14 +55,6 @@ export default function SkillsSection() {
       setIsLoading(false);
     }
   }, [isInView]);
-  useEffect(() => {
-    if (!isLoading) {
-      const gitElement = document.getElementById("Git");
-      if (gitElement) {
-        gitElement.scrollIntoView({ behavior: "smooth", block: "end" });
-      }
-    }
-  }, [isLoading]);
   return (
     <section
       id="skills"

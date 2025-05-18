@@ -2,12 +2,18 @@
 import React from "react";
 import Hero from "./sections/hero";
 import SkillsSection from "./sections/skills";
+import ProjectsSection from "./sections/projects";
+import Background from "./background";
+// import AIProjectsSection from "./sections/AIProjectsSection";
 
 export default function Home() {
   return (
     <React.Fragment>
+      <Background />
       <Hero />
       <SkillsSection />
+      <ProjectsSection />
+      {/* <AIProjectsSection /> Will be available after builing AI porjects */}
     </React.Fragment>
   );
 }
