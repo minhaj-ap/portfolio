@@ -7,6 +7,7 @@ import Background from "./background";
 import AIProjectsSection from "./sections/AIProjectsSection";
 import LeetCodeSection from "./sections/leetCodeSection";
 import ContactSection from "./sections/contact";
+import Footer from "./sections/footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <AIProjectsSection />
       <LeetCodeSection />
       <ContactSection />
+      <Footer/>
     </React.Fragment>
   );
 }
