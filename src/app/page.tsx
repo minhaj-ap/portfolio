@@ -6,6 +6,7 @@ import ProjectsSection from "./sections/projects";
 import Background from "./background";
 import AIProjectsSection from "./sections/AIProjectsSection";
 import LeetCodeSection from "./sections/leetCodeSection";
+import ContactSection from "./sections/contact";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProjectsSection />
       <AIProjectsSection />
       <LeetCodeSection />
+      <ContactSection />
     </React.Fragment>
   );
 }
