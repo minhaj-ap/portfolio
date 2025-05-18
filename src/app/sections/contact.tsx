@@ -42,7 +42,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-16 bg-gray-50 dark:bg-gray-900/50 border-t border-gray-200 dark:border-gray-800"
+      className="py-16 bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-800"
     >
       <div className="max-w-2xl mx-auto px-6">
         <motion.h2
@@ -207,7 +207,7 @@ export default function ContactSection() {
                   github.com/minhaj-ap
                 </a>
                 <a
-                  href="https://linkedin.com/in/your-profile" // Replace with your LinkedIn
+                  href="https://www.linkedin.com/in/minhaj-ap-7662ab2b1/" 
                   target="_blank"
                   rel="noopener"
                   className="flex items-center text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"

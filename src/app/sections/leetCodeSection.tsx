@@ -11,28 +11,28 @@ type LeetCodeItem = {
 };
 
 const leetCodeData: LeetCodeItem[] = [
-//   {
-//     id: 1,
-//     title: "Two Sum",
-//     difficulty: "Easy",
-//     topics: ["Array", "Hash Table"],
-//     solved: true,
-//     solutionLink: "#",
-//   },
-//   {
-//     id: 2,
-//     title: "Add Two Numbers",
-//     difficulty: "Medium",
-//     topics: ["Linked List", "Math"],
-//     solved: false,
-//   },
+  //   {
+  //     id: 1,
+  //     title: "Two Sum",
+  //     difficulty: "Easy",
+  //     topics: ["Array", "Hash Table"],
+  //     solved: true,
+  //     solutionLink: "#",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Add Two Numbers",
+  //     difficulty: "Medium",
+  //     topics: ["Linked List", "Math"],
+  //     solved: false,
+  //   },
 ];
 
 export default function LeetCodeSection() {
   const isEmpty = leetCodeData.length === 0;
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section className="py-16 bg-gray-50 dark:bg-gray-900" id="algo">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export default function LeetCodeSection() {
             viewport={{ once: true }}
             className="text-center py-12 border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-xl"
           >
-            <FiCode className="mx-auto w-12 h-12 text-gray-400 mb-4" />
+            <FiCode className="mx-auto w-12 h-12 text-teal-500 dark:text-teal-400 mb-4" />
             <h3 className="text-xl font-medium text-gray-500 dark:text-gray-400 mb-2">
               DSA Journey in Progress
             </h3>

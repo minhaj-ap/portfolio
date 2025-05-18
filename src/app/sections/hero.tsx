@@ -4,33 +4,32 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import ScrollIndicator from "@/components/scroll-indicator";
-
-// Grid Background
+import NavigationDots from "@/components/dottedScrollBar";
 
 export default function Hero() {
   const [clickedScroll, setClickedScroll] = useState(false);
   const [fadingOut, setFadingOut] = useState(false);
-     useEffect(() => {
-       const handleScroll = () => {
-         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-         const fullHeight = document.documentElement.scrollHeight;
-         const viewportHeight = window.innerHeight;
-         const halfway = (fullHeight - viewportHeight) / 2;
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const fullHeight = document.documentElement.scrollHeight;
+      const viewportHeight = window.innerHeight;
+      const halfway = (fullHeight - viewportHeight) / 2;
 
-         if (scrollTop > halfway && !clickedScroll && !fadingOut) {
-           setFadingOut(true);
-         }
-       };
+      if (scrollTop > halfway && !clickedScroll && !fadingOut) {
+        setFadingOut(true);
+      }
+    };
 
-       window.addEventListener("scroll", handleScroll);
-       return () => window.removeEventListener("scroll", handleScroll);
-     }, [clickedScroll, fadingOut]);
-       useEffect(() => {
-         if (fadingOut) {
-           const timeout = setTimeout(() => setClickedScroll(true), 500); // match animation duration
-           return () => clearTimeout(timeout);
-         }
-       }, [fadingOut]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [clickedScroll, fadingOut]);
+  useEffect(() => {
+    if (fadingOut) {
+      const timeout = setTimeout(() => setClickedScroll(true), 500); // match animation duration
+      return () => clearTimeout(timeout);
+    }
+  }, [fadingOut]);
   const handleDownload = () => {
     try {
       const link = document.createElement("a");
@@ -44,7 +43,10 @@ export default function Hero() {
     }
   };
   return (
-    <div className="min-h-screen bg-gray-50/40 dark:bg-gray-900/70 transition-colors duration-300 relative">
+    <div
+      className="min-h-screen bg-gray-50/40 dark:bg-gray-900/70 transition-colors duration-300 relative"
+      id="hero"
+    >
       <Head>
         <title>Minhaj AP | MERN Stack Developer</title>
         <meta
@@ -103,12 +105,13 @@ export default function Hero() {
             justifyContent: "center",
             opacity: fadingOut ? 0 : 1,
             transition: "opacity 0.5s ease",
-            pointerEvents: fadingOut ? "none" : "auto", 
+            pointerEvents: fadingOut ? "none" : "auto",
           }}
         >
           <ScrollIndicator />
         </div>
       )}
+      <NavigationDots />
     </div>
   );
 }
