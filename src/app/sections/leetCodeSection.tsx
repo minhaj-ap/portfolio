@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import { FiCode, FiTrendingUp } from "react-icons/fi";
 import { useData } from "@/context/data-context";
-
+// NOTE: It is recommended to keep the LeetCode array in data.json 
+// as groups of 3, with a maximum of 9 objects, for optimal styling.
 export default function LeetCodeSection() {
   const { LeetCode, loading } = useData();
   const isEmpty = LeetCode?.length === 0;
