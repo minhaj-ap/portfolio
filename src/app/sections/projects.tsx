@@ -13,7 +13,7 @@ const projects = [
       "95% admin CRUD coverage",
     ],
     links: {
-      live: "https://movie-review-minhaj.web.app/",
+      live: "https://movierview.netlify.app/",
       github: "https://github.com/minhaj-ap/movieReview",
     },
   },
