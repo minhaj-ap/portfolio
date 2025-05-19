@@ -1,0 +1,76 @@
+{
+  "AIProject": [
+    {
+      "title": "Review Analyzer API",
+      "description": "NLP-powered endpoint for summarizing reviews and extracting ratings",
+      "features": [
+        "Sentiment analysis",
+        "Rating prediction",
+        "Text summarization"
+      ],
+      "tech": ["Python", "FastAPI", "spaCy", "Transformers"],
+      "github": "repo-link",
+      "contributorsWelcome": true
+    }
+  ],
+  "leetCode": [
+    {
+      "id": 1,
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "topics": ["Array", "Hash Table"],
+      "solved": true,
+      "solutionLink": "#"
+    },
+    {
+      "id": 2,
+      "title": "Add Two Numbers",
+      "difficulty": "Medium",
+      "topics": ["Linked List", "Math"],
+      "solved": false
+    }
+  ],
+  "projects": [
+    {
+      "title": "Movie Review App",
+      "description": "Full-stack platform with user reviews and ratings",
+      "tech": ["React", "Node.js", "MongoDB", "Firebase"],
+      "metrics": [
+        "3x component reuse efficiency",
+        "60% faster DB queries",
+        "95% admin CRUD coverage"
+      ],
+      "links": {
+        "live": "https://movierview.netlify.app/",
+        "github": "https://github.com/minhaj-ap/movieReview"
+      }
+    },
+    {
+      "title": "IEDC MASC Website (3000+ users)",
+      "description": "Scalable full-stack portal for student services ,created for IEDC MASC",
+      "tech": ["Next.js", "Express", "MongoDB", "Cloudinary"],
+      "metrics": [
+        "40% SEO improvement",
+        "30% data fetch optimization",
+        "95% admin control"
+      ],
+      "links": {
+        "live": "https://iedc.masc.edu.in/"
+      }
+    },
+    {
+      "title": "Tic-Tac-Toe AI",
+      "description": "Game with human vs AI modes",
+      "tech": ["Next.js", "Algorithms"],
+      "metrics": [
+        "Minimax algorithm",
+        "Responsive design",
+        "100% game logic coverage"
+      ],
+      "links": {
+        "live": "https://tic-tac-toe-coral-five-65.vercel.app",
+        "github": "https://github.com/minhaj-ap/tic-tac-toe"
+      }
+    }
+  ]
+}

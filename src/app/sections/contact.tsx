@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 import { useState } from "react";
@@ -207,7 +208,7 @@ export default function ContactSection() {
                   github.com/minhaj-ap
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/minhaj-ap-7662ab2b1/" 
+                  href="https://www.linkedin.com/in/minhaj-ap-7662ab2b1/"
                   target="_blank"
                   rel="noopener"
                   className="flex items-center text-gray-700 dark:text-gray-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"

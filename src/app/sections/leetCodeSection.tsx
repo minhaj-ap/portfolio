@@ -1,39 +1,16 @@
+"use client";
 import { motion } from "framer-motion";
 import { FiCode, FiTrendingUp } from "react-icons/fi";
-
-type LeetCodeItem = {
-  id: number;
-  title: string;
-  difficulty: "Easy" | "Medium" | "Hard";
-  topics: string[];
-  solved: boolean;
-  solutionLink?: string;
-};
-
-const leetCodeData: LeetCodeItem[] = [
-  //   {
-  //     id: 1,
-  //     title: "Two Sum",
-  //     difficulty: "Easy",
-  //     topics: ["Array", "Hash Table"],
-  //     solved: true,
-  //     solutionLink: "#",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Add Two Numbers",
-  //     difficulty: "Medium",
-  //     topics: ["Linked List", "Math"],
-  //     solved: false,
-  //   },
-];
+import { useData } from "@/context/data-context";
 
 export default function LeetCodeSection() {
-  const isEmpty = leetCodeData.length === 0;
+  const { LeetCode, loading } = useData();
+  const isEmpty = LeetCode?.length === 0;
 
   return (
     <section className="py-16 bg-gray-50 dark:bg-gray-900" id="algo">
       <div className="max-w-6xl mx-auto px-6">
+        {loading && <p>Loading...</p>}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +40,7 @@ export default function LeetCodeSection() {
           </motion.div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {leetCodeData.map((problem) => (
+            {LeetCode?.map((problem) => (
               <motion.div
                 key={problem.id}
                 initial={{ opacity: 0, y: 20 }}

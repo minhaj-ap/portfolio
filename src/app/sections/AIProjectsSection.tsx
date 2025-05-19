@@ -1,27 +1,9 @@
+"use client";
 import { motion } from "framer-motion";
 import { FiGithub, FiUsers, FiCpu } from "react-icons/fi";
-type AIProject = {
-  title: string;
-  description: string;
-  features: string[];
-  tech: string[];
-  github?: string;
-  contributorsWelcome: boolean;
-};
-
-const aiProjects: AIProject[] = [
-//   {
-//     title: "Review Analyzer API",
-//     description:
-//       "NLP-powered endpoint for summarizing reviews and extracting ratings",
-//     features: ["Sentiment analysis", "Rating prediction", "Text summarization"],
-//     tech: ["Python", "FastAPI", "spaCy", "Transformers"],
-//     github: "repo-link", 
-//     contributorsWelcome: true,
-//   },
-];
-
+import { useData } from "@/context/data-context";
 export default function AIProjectsSection() {
+  const { AIprojects, loading } = useData();
   return (
     <section className="py-16 bg-white dark:bg-gray-950" id="ai">
       <div className="max-w-6xl mx-auto px-6 overflow-hidden">
@@ -35,7 +17,9 @@ export default function AIProjectsSection() {
           Open-Source AI Projects
         </motion.h2>
 
-        {aiProjects.length === 0 ? (
+        {loading && <p>Loading...</p>}
+
+        {AIprojects?.length === 0 ? (
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -62,7 +46,7 @@ export default function AIProjectsSection() {
           </motion.div>
         ) : (
           <div className="grid md:grid-cols-2 gap-8">
-            {aiProjects.map((project, index) => (
+            {AIprojects?.map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -138,15 +122,15 @@ export default function AIProjectsSection() {
           </p>
           <a
             href={
-              aiProjects.length
+              AIprojects?.length
                 ? "mailto:minhajap00@gmail.com?subject=AI%20Project%20Collaboration&body=Hi%20Minhaj,%0A%0AI'd%20like%20to%20discuss%20contributing%20to%20your%20%5Bproject%20name%5D.%20Here's%20what%20I%20can%20bring:%0A%0A-%20Skill%20set%3A%20%0A-%20Idea%3A%20%0A%0ABest,%0A%5BYour%20name%5D"
                 : "https://github.com/minhaj-ap"
             }
-            target={aiProjects.length ? "_self" : "_blank"}
+            target={AIprojects?.length ? "_self" : "_blank"}
             className="inline-flex items-center px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-lg shadow-md transition-colors"
           >
             <FiUsers className="mr-2" />
-            {aiProjects.length ? "Become a Contributor" : "View My GitHub"}
+            {AIprojects?.length ? "Become a Contributor" : "View My GitHub"}
           </a>
         </motion.div>
       </div>

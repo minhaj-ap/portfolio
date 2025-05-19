@@ -14,7 +14,10 @@ export default function Hero() {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const fullHeight = document.documentElement.scrollHeight;
       const viewportHeight = window.innerHeight;
-      const halfway = (fullHeight - viewportHeight) / 2;
+      const halfway = Math.min(
+        (fullHeight - viewportHeight) / 2,
+        viewportHeight * 0.3
+      );
 
       if (scrollTop > halfway && !clickedScroll && !fadingOut) {
         setFadingOut(true);

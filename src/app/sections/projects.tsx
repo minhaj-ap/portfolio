@@ -1,58 +1,16 @@
+"use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiGithub, FiExternalLink, FiLock, FiCode } from "react-icons/fi";
-
-const projects = [
-  {
-    title: "Movie Review App",
-    description: "Full-stack platform with user reviews and ratings",
-    tech: ["React", "Node.js", "MongoDB", "Firebase"],
-    metrics: [
-      "3x component reuse efficiency",
-      "60% faster DB queries",
-      "95% admin CRUD coverage",
-    ],
-    links: {
-      live: "https://movierview.netlify.app/",
-      github: "https://github.com/minhaj-ap/movieReview",
-    },
-  },
-  {
-    title: "IEDC MASC Website (3000+ users)",
-    description:
-      "Scalable full-stack portal for student services ,created for IEDC MASC",
-    tech: ["Next.js", "Express", "MongoDB", "Cloudinary"],
-    metrics: [
-      "40% SEO improvement",
-      "30% data fetch optimization",
-      "95% admin control",
-    ],
-    links: {
-      live: "https://iedc.masc.edu.in/",
-    },
-  },
-  {
-    title: "Tic-Tac-Toe AI",
-    description: "Game with human vs AI modes",
-    tech: ["Next.js", "Algorithms"],
-    metrics: [
-      "Minimax algorithm",
-      "Responsive design",
-      "100% game logic coverage",
-    ],
-    links: {
-      live: "https://tic-tac-toe-coral-five-65.vercel.app",
-      github: "https://github.com/minhaj-ap/tic-tac-toe",
-    },
-  },
-];
+import { useData } from "@/context/data-context";
 
 export default function ProjectsSection() {
+  const { Projects, loading } = useData();
   const [tooltip, setTooltip] = useState({ show: false, project: "" });
   return (
     <section className="py-16 bg-gray-50/60 dark:bg-gray-900/50" id="projects">
       <div className="max-w-6xl mx-auto px-6 overflow-hidden">
-        {/* Section Title */}
+        {loading && <p>Loading...</p>}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,10 +20,9 @@ export default function ProjectsSection() {
         >
           Project Highlights
         </motion.h2>
-
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {Projects?.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
@@ -158,7 +115,7 @@ export default function ProjectsSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
             className={`bg-white dark:bg-gray-800/70 p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow ${
-              projects.length % 3 === 0
+              (Projects?.length ?? 0) % 3 === 0
                 ? "md:col-span-3"
                 : "md:col-span-2 lg:col-span-1"
             }`}
@@ -170,7 +127,7 @@ export default function ProjectsSection() {
                 Check out my other projects, experiments, and contributions
               </p>
               <a
-                href="https://github.com/minhaj-ap" 
+                href="https://github.com/minhaj-ap"
                 target="_blank"
                 className="px-5 py-2 bg-gray-900 hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg flex items-center gap-2 transition-colors"
               >
