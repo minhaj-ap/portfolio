@@ -1,35 +1,6 @@
 {
-  "AIProject": [
-    {
-      "title": "Review Analyzer API",
-      "description": "NLP-powered endpoint for summarizing reviews and extracting ratings",
-      "features": [
-        "Sentiment analysis",
-        "Rating prediction",
-        "Text summarization"
-      ],
-      "tech": ["Python", "FastAPI", "spaCy", "Transformers"],
-      "github": "repo-link",
-      "contributorsWelcome": true
-    }
-  ],
-  "leetCode": [
-    {
-      "id": 1,
-      "title": "Two Sum",
-      "difficulty": "Easy",
-      "topics": ["Array", "Hash Table"],
-      "solved": true,
-      "solutionLink": "#"
-    },
-    {
-      "id": 2,
-      "title": "Add Two Numbers",
-      "difficulty": "Medium",
-      "topics": ["Linked List", "Math"],
-      "solved": false
-    }
-  ],
+  "AIProject": [],
+  "leetCode": [],
   "projects": [
     {
       "title": "Movie Review App",
