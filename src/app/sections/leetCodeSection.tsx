@@ -106,7 +106,7 @@ export default function LeetCodeSection() {
         >
           {!isEmpty && (
             <a
-              href="https://leetcode.com/"
+              href="https://leetcode.com/u/minhajAp/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-5 py-3 bg-gray-900 hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 text-white rounded-lg transition-colors"

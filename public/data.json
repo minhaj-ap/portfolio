@@ -1,6 +1,43 @@
 {
-  "AIProject": [],
-  "leetCode": [],
+  "AIProject": [
+    {
+      "title": "NLP Tag Generator API",
+      "description": "A Flask-based API that uses spaCy to generate context-aware tags from reviews or paragraphs. Useful for content categorization, SEO, and summarization.",
+      "features":  [
+        "Accepts text input (review or paragraph)",
+        "Generates relevant tags using spaCy NLP",
+        "Returns tags in clean JSON format",
+        "Lightweight and easy to integrate",
+        "Built for quick content analysis"
+      ],
+      "tech": ["Python", "Flask", "spaCy", "REST API"],
+      "github": "https://github.com/minhaj-ap/ai_project",
+      "contributorsWelcome": true
+    }
+  ],
+  "leetCode": [
+    {
+      "id": 1,
+      "title": "Two Sum",
+      "difficulty": "Easy",
+      "topics": ["Array", "Hash Map"],
+      "solved": true
+    },
+    {
+      "id": 2,
+      "title": "Valid Parentheses",
+      "difficulty": "Easy",
+      "topics": ["Stack", "String","Hash Map"],
+      "solved": true
+    },
+    {
+      "id": 3,
+      "title": "Merge two linked lists",
+      "difficulty": "Easy",
+      "topics": ["Linked List", "Array", "Sorting"],
+      "solved": true
+    }
+  ],
   "projects": [
     {
       "title": "Movie Review App",
