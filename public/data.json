@@ -36,6 +36,27 @@
       "difficulty": "Easy",
       "topics": ["Linked List", "Array", "Sorting"],
       "solved": true
+    },
+    {
+      "id": 4,
+      "title": "Best Time to Buy and Sell Stock",
+      "difficulty": "Easy",
+      "topics": ["Dynamic Programming", "Array"],
+      "solved": true
+    },
+    {
+      "id": 5,
+      "title": "Climbing Stairs",
+      "difficulty": "Easy",
+      "topics": ["Math", "Dynamic Programming", "Memoization"],
+      "solved": true
+    },
+    {
+      "id": 6,
+      "title": "Valid Anagram",
+      "difficulty": "Easy",
+      "topics": ["Hash table", "String", "Sorting"],
+      "solved": true
     }
   ],
   "projects": [
