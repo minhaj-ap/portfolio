@@ -57,6 +57,27 @@
       "difficulty": "Easy",
       "topics": ["Hash table", "String", "Sorting"],
       "solved": true
+    },
+    {
+      "id": 7,
+      "title": "Binary Search",
+      "difficulty": "Easy",
+      "topics": ["Binary Search", "Array"],
+      "solved": true
+    },
+    {
+      "id": 8,
+      "title": "Intersection of Two Arrays II",
+      "difficulty": "Easy",
+      "topics": ["Array","Hash Table","Two Pointers","Binary Search","Sorting"],
+      "solved": true
+    },
+    {
+      "id": 9,
+      "title": "Contains Duplicate",
+      "difficulty": "Easy",
+      "topics": ["Array","Hash Table","Sorting"],
+      "solved": true
     }
   ],
   "projects": [
