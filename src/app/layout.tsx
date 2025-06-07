@@ -47,18 +47,18 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Minhaj AP" }],
   creator: "Minhaj AP",
-  metadataBase: new URL("https://portfolio-minhaj.vercel.app"),
+  metadataBase: new URL("https://minhajap.xyz"),
   openGraph: {
     title: "Minhaj AP | Full Stack Developer",
     description:
       "Full stack developer based in Kerala, India. Proficient in the MERN stack and Next.js, actively learning Python and DSA. Seeking job opportunities and internships.",
-    url: "https://portfolio-minhaj.vercel.app",
+    url: "https://minhajap.xyz",
     siteName: "Minhaj Portfolio",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://portfolio-minhaj.vercel.app/og-image.png", 
+        url: "https://minhajap.xyz/og-image.png", 
         width: 1200,
         height: 630,
         alt: "Minhaj AP Portfolio",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: "Minhaj AP | Full Stack Developer",
     description:
       "Explore the portfolio of Minhaj AP, a full stack developer with strong backend skills, open to internships and opportunities.",
-    images: ["https://portfolio-minhaj.vercel.app/og-image.png"], 
+    images: ["https://minhajap.xyz/og-image.png"], 
   },
   robots: {
     index: true,
