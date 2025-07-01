@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio-minhaj.vercel.app"
+        }
+      ],
+      "destination": "https://portfolio.minhajap.xyz",
+      "permanent": true
+    }
+  ]
+}

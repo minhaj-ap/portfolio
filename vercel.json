@@ -1,8 +1,14 @@
 {
   "redirects": [
     {
-      "source": "/",
-      "destination": "https://minhajap.xyz/",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio-minhaj.vercel.app"
+        }
+      ],
+      "destination": "https://minhajap.xyz",
       "permanent": true
     }
   ]
